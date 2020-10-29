@@ -2,6 +2,8 @@ import React from 'react';
 import SelectionBox from '../selectionBox/SelectionBox';
 import Button from '../button/Button';
 
+import ProgressBar from '../progressBar/ProgressBar';
+
 import './Styles.scss';
 
 const LearningModule = ({setGameStatus}) => {
@@ -38,9 +40,12 @@ const LearningModule = ({setGameStatus}) => {
     })
   }
 
+  const progress = `${(currentQuestionId + 1) / (quizData.totalQuestions + 1) * 100}%`;
 
   return (
     <div className="learningModule">
+    <ProgressBar progress={progress} />
+    <div>
       { currentQuestion.title &&
         <>
           <div className="learningModule--header">
@@ -62,6 +67,7 @@ const LearningModule = ({setGameStatus}) => {
           </div>
         </>
       }
+      </div>
     </div>
   )
 }
