@@ -14,7 +14,7 @@
         padding: 15px;
         border-radius: 25px;
         width: fit-content;
-        margin: 0 auto;
+        margin: 5% auto;
     }
     &--message {
         @include subheader;
@@ -24,6 +24,5 @@
         background-color: $barney;
         margin-top: 40px;
         display: inline-block;
-    }
-   
+    } 
 }
